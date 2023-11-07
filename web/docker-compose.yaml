@@ -8,6 +8,8 @@ services:
   container_name: web
   depends_on:
   - catalogue
+  - user
+  - cart
   ports:
     - "80:80"
  mongodb:
@@ -26,4 +28,10 @@ services:
   depends_on:
   - redis
   - mongodb
+ cart:
+  image: cart:v1
+  container_name: cart
+  depends_on:
+  - catalogue
+  - redis
   

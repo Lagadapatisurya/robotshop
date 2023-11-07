@@ -5,7 +5,7 @@ networks:
 services:
  web:
   image: web:v1
-  container_name: web-robotshop:v1
+  container_name: web_8.0
   depends_on:
   - catalogue
   ports:

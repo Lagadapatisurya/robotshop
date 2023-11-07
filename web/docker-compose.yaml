@@ -1,8 +1,7 @@
 version: '3.9'
 networks:
  robotshop:
-  driver: bridge
-  
+  driver: bridge 
 services:
  web:
   image: web:v1

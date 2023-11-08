@@ -12,6 +12,7 @@ services:
   - cart
   - mysql
   - shipping
+  - payment
   ports:
     - "80:80"
  mongodb:
@@ -44,4 +45,12 @@ services:
   container_name: shipping
   depends_on:
   - mysql
+ rabbitmq:
+  image: rabbitmq
+  container_name: rabbitmq
+ payment:
+  image: payment:v1 
+  container_name: payment
+  depends_on:
+  - rabbitmq
   
